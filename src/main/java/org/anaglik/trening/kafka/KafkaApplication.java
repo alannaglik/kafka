@@ -17,14 +17,9 @@ public class KafkaApplication {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(
 				KafkaProduceConfig.class,
 				ProducerKafkaService.class);
-		context.getBean(ProducerKafkaService.class)
-				.sendMessage("TESTOWA_3");  //OK
 
-				/* Problem z wysłaniem na konkretną partycję */
-				//.sendMessageToPartition("Pierwsza_ wiadomosc.", 1);
-				//.sendMessage1("MSG"); //OK
+		context.getBean(ProducerKafkaService.class)
+				.sendMessage("TESTOWA ");  //OK
 
 	}
-
-
 }
